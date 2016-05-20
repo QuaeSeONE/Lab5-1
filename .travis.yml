@@ -1,3 +1,4 @@
-langauge: c
-script: make testto
-compiler: gcc
+language: c
+script:
+  - make ./bin/test
+  - testto
