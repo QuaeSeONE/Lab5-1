@@ -45,12 +45,12 @@ CTEST(equation_suite, no_roots_test)
 
 	double x1;
 	double x2;
+
+	double got_return;
 	
-	sqr(a, b, c, &x1, &x2);
+	got_return = sqr(a, b, c, &x1, &x2);
 
-	const double expected_x1 = 0;
-	const double expected_x2 = 0;
+	const double expected_return = 1;
 
-	ASSERT_DBL_NEAR(expected_x1, x1);
-	ASSERT_DBL_NEAR(expected_x2, x2);
+	ASSERT_EQUAL(got_return, expected_return);
 }

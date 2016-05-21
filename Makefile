@@ -1,11 +1,11 @@
 ./bin/main: ./obj/main.o ./obj/sqr.o
 	gcc -o ./bin/main ./obj/main.o ./obj/sqr.o -lm
 
-./bin/test: ./obj/main_test.o ./obj/sqr.o ./obj/test.o
-	gcc -o ./bin/test ./obj/main_test.o ./obj/sqr.o ./obj/test.o -lm
-
 testto:
 	./bin/test
+
+./bin/test: ./obj/main_test.o ./obj/sqr.o ./obj/test.o
+	gcc -o ./bin/test ./obj/main_test.o ./obj/sqr.o ./obj/test.o -lm
 
 ./obj/main.o: ./src/main.c
 	gcc -c ./src/main.c -o ./obj/main.o
