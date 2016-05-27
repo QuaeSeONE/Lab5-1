@@ -2,3 +2,4 @@ language: c
 script:
   - make ./bin/test
   - make testto
+  - make
