@@ -1,7 +1,7 @@
 ./bin/main: ./obj/main.o ./obj/sqr.o
 	gcc -o ./bin/main ./obj/main.o ./obj/sqr.o -lm
 
-testto:
+testto: ./bin/test
 	./bin/test
 
 ./bin/test: ./obj/main_test.o ./obj/sqr.o ./obj/test.o
