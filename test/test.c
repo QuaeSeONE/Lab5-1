@@ -9,11 +9,17 @@ CTEST(equation_suite, two_roots_test)
 
 	double x1;
 	double x2;
-	
-	sqr(a, b, c, &x1, &x2);
 
 	const double expected_x1 = -1;
 	const double expected_x2 = -2;
+
+	double got_return;
+	
+	got_return = sqr(a, b, c, &x1, &x2);
+
+	const double expected_return = 0;
+
+	ASSERT_EQUAL(got_return, expected_return);
 
 	ASSERT_DBL_NEAR(expected_x1, x1);
 	ASSERT_DBL_NEAR(expected_x2, x2);
@@ -27,11 +33,17 @@ CTEST(equation_suite, one_root_test)
 
 	double x1;
 	double x2;
-	
-	sqr(a, b, c, &x1, &x2);
 
 	const double expected_x1 = -1;
 	const double expected_x2 = -1;
+
+	double got_return;
+	
+	got_return = sqr(a, b, c, &x1, &x2);
+
+	const double expected_return = 0;
+
+	ASSERT_EQUAL(got_return, expected_return);
 
 	ASSERT_DBL_NEAR(expected_x1, x1);
 	ASSERT_DBL_NEAR(expected_x2, x2);
